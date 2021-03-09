@@ -5,6 +5,11 @@
     },
     "extends": [
         "plugin:react/recommended",
+        "eslint:recommended",
+        "plugin:import/errors",
+        "plugin:import/warnings",
+        "plugin:jsx-a11y/recommended",
+        "plugin:react-hooks/recommended",
         "airbnb"
     ],
     "parserOptions": {
@@ -18,5 +23,20 @@
         "react"
     ],
     "rules": {
+      "semi": ["warn", "never"],
+      "react/jsx-fragments": ["warn", "element"],
+      "camelcase": "off",
+      "indent": ["warn", 2],
+      "quotes": ["warn", "single", { "avoidEscape": true }],
+      "jsx-quotes": ["warn", "prefer-single"],
+      "react/react-in-jsx-scope": "off",
+      "react/jsx-max-props-per-line": "warn",
+      "react/jsx-props-no-spreading": "off",
+      "react/jsx-one-expression-per-line": "off",
+      "react/state-in-constructor": "off",
+      "import/no-unresolved": "off",
+      "react/forbid-prop-types": "off",
+      "react/prop-types": "off",
+      "no-unused-vars": "warn"
     }
 }
