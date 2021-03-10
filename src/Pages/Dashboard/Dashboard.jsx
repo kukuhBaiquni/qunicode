@@ -1,15 +1,17 @@
 import { useSelector, useDispatch } from 'react-redux'
 import { Fragment } from 'react'
-import { increment, decrement } from 'Lib/Redux/Slice/counter'
+import {
+  counterActionIncrement, counterActionDecrement,
+} from 'Lib/Redux/Actions/counter'
 
 function Dashboard() {
   const { number } = useSelector((state) => state.counter)
   const dispatch = useDispatch()
   return (
     <Fragment>
-      <button type='button' onClick={() => dispatch(increment('add'))}>Up</button>
+      <button type='button' onClick={() => dispatch(counterActionIncrement('add'))}>Up</button>
       <div>{number}</div>
-      <button type='button' onClick={() => dispatch(decrement('sub'))}>Down</button>
+      <button type='button' onClick={() => dispatch(counterActionDecrement('sub'))}>Down</button>
     </Fragment>
   )
 }
