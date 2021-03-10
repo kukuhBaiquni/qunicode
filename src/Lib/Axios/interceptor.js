@@ -5,6 +5,6 @@ export const setDefaultToken = (request) => {
 }
 
 export const errorHandler = async (error) => {
-  console.log('error', error)
+  console.log('error', error.response)
   return error
 }

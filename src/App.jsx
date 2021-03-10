@@ -1,5 +1,5 @@
 import { Provider } from 'react-redux'
-import Dashboard from 'Pages/Dashboard'
+import Dashboard from 'Layout/Dashboard'
 import store from './Lib/Redux/store'
 
 function App() {
