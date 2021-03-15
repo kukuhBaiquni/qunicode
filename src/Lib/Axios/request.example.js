@@ -1,11 +1,11 @@
 import axios from 'axios'
 import { setDefaultToken, errorHandler } from './interceptor'
 
-const REQUEST = axios.create({
+const __REQ = axios.create({
   baseURL: 'https://areon-api.doterb.com/api/v1',
 })
 
-REQUEST.interceptors.request.use(setDefaultToken)
-REQUEST.interceptors.response.use((res) => res, errorHandler)
+__REQ.interceptors.request.use(setDefaultToken)
+__REQ.interceptors.response.use((res) => res, errorHandler)
 
-export default REQUEST
+export default __REQ

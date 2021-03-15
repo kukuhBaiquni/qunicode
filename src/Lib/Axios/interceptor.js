@@ -4,7 +4,4 @@ export const setDefaultToken = (request) => {
   return request
 }
 
-export const errorHandler = async (error) => {
-  console.log('error', error.response)
-  return error
-}
+export const errorHandler = async (error) => error
