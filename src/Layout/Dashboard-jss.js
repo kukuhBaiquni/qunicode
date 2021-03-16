@@ -37,6 +37,15 @@ const useStyles = makeStyles((theme) => ({
   nested: {
     paddingLeft: theme.spacing(4),
   },
+  logoWrapper: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    margin: '25px 0',
+  },
+  imageLogo: {
+
+  },
 }))
 
 export default useStyles
