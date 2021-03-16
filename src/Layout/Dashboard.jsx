@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import clsx from 'clsx'
 
 import { useTheme } from '@material-ui/core/styles'
 import Drawer from '@material-ui/core/Drawer'
@@ -10,9 +9,8 @@ import CssBaseline from '@material-ui/core/CssBaseline'
 import Typography from '@material-ui/core/Typography'
 import Divider from '@material-ui/core/Divider'
 import IconButton from '@material-ui/core/IconButton'
+import Hidden from '@material-ui/core/Hidden'
 import MenuIcon from '@material-ui/icons/Menu'
-import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
-import ChevronRightIcon from '@material-ui/icons/ChevronRight'
 import ListItem from '@material-ui/core/ListItem'
 import ListItemIcon from '@material-ui/core/ListItemIcon'
 import ListItemText from '@material-ui/core/ListItemText'
@@ -25,106 +23,116 @@ import ExpandMore from '@material-ui/icons/ExpandMore'
 
 import useStyles from './Dashboard-jss'
 
-export default function MiniDrawer() {
+function ResponsiveDrawer() {
   const classes = useStyles()
   const theme = useTheme()
-  const [showDrawer, setShowDrawer] = useState(false)
-
+  const [mobileOpen, setMobileOpen] = useState(false)
   const [childOpen, setChildOpen] = useState(false)
 
-  const toggleDrawer = () => {
-    setShowDrawer((old) => !old)
+  const handleDrawerToggle = () => {
+    setMobileOpen(!mobileOpen)
   }
 
   const toggleChild = () => {
     setChildOpen((old) => !old)
   }
 
+  const drawer = (
+    <div>
+      <div className={classes.toolbar} />
+      <Divider />
+      <List>
+        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+          <ListItem button key={text}>
+            <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
+            <ListItemText primary={text} />
+          </ListItem>
+        ))}
+      </List>
+      <Divider />
+      <List>
+        {['All mail', 'Trash', 'Spam'].map((text, index) => (
+          <ListItem button key={text}>
+            <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
+            <ListItemText primary={text} />
+          </ListItem>
+        ))}
+      </List>
+      <ListItem button onClick={toggleChild}>
+        <ListItemIcon>
+          <InboxIcon />
+        </ListItemIcon>
+        <ListItemText primary='Inbox' />
+        {childOpen ? <ExpandLess /> : <ExpandMore />}
+      </ListItem>
+      <Collapse in={childOpen} timeout='auto' unmountOnExit>
+        <List component='div' disablePadding>
+          <ListItem button className={classes.nested}>
+            <ListItemIcon>
+              <BlurLinear />
+            </ListItemIcon>
+            <ListItemText primary='Starred' />
+          </ListItem>
+          <ListItem button className={classes.nested}>
+            <ListItemIcon>
+              <BlurLinear />
+            </ListItemIcon>
+            <ListItemText primary='Starred' />
+          </ListItem>
+        </List>
+      </Collapse>
+    </div>
+  )
+
   return (
     <div className={classes.root}>
       <CssBaseline />
-      <AppBar
-        position='fixed'
-        className={clsx(classes.appBar, {
-          [classes.appBarShift]: showDrawer,
-        })}
-      >
+      <AppBar position='fixed' className={classes.appBar}>
         <Toolbar>
           <IconButton
             color='inherit'
-            onClick={toggleDrawer}
+            aria-label='open drawer'
             edge='start'
-            className={clsx(classes.menuButton, {
-              [classes.hide]: showDrawer,
-            })}
+            onClick={handleDrawerToggle}
+            className={classes.menuButton}
           >
             <MenuIcon />
           </IconButton>
           <Typography variant='h6' noWrap>
-            Mini variant drawer
+            Responsive drawer
           </Typography>
         </Toolbar>
       </AppBar>
-      <Drawer
-        variant='permanent'
-        className={clsx(classes.drawer, {
-          [classes.drawerOpen]: showDrawer,
-          [classes.drawerClose]: !showDrawer,
-        })}
-        classes={{
-          paper: clsx({
-            [classes.drawerOpen]: showDrawer,
-            [classes.drawerClose]: !showDrawer,
-          }),
-        }}
-      >
-        <div className={classes.toolbar}>
-          <IconButton onClick={toggleDrawer}>
-            {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
-          </IconButton>
-        </div>
-        <Divider />
-        <List>
-          {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
-        </List>
-        <Divider />
-        <List>
-          {['All mail', 'Trash', 'Spam'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
-          <ListItem button onClick={toggleChild}>
-            <ListItemIcon>
-              <InboxIcon />
-            </ListItemIcon>
-            <ListItemText primary='Inbox' />
-            {childOpen ? <ExpandLess /> : <ExpandMore />}
-          </ListItem>
-          <Collapse in={childOpen} timeout='auto' unmountOnExit>
-            <List component='div' disablePadding>
-              <ListItem button className={classes.nested}>
-                <ListItemIcon>
-                  <BlurLinear />
-                </ListItemIcon>
-                <ListItemText primary='Starred' />
-              </ListItem>
-              <ListItem button className={classes.nested}>
-                <ListItemIcon>
-                  <BlurLinear />
-                </ListItemIcon>
-                <ListItemText primary='Starred' />
-              </ListItem>
-            </List>
-          </Collapse>
-        </List>
-      </Drawer>
+      <nav className={classes.drawer} aria-label='mailbox folders'>
+        {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
+        <Hidden smUp implementation='css'>
+          <Drawer
+            variant='temporary'
+            anchor={theme.direction === 'rtl' ? 'right' : 'left'}
+            open={mobileOpen}
+            onClose={handleDrawerToggle}
+            classes={{
+              paper: classes.drawerPaper,
+            }}
+            ModalProps={{
+              keepMounted: true, // Better open performance on mobile.
+            }}
+          >
+            {drawer}
+          </Drawer>
+        </Hidden>
+        <Hidden xsDown implementation='css'>
+          <Drawer
+            classes={{
+              paper: classes.drawerPaper,
+            }}
+            variant='permanent'
+            open
+          >
+            {drawer}
+          </Drawer>
+        </Hidden>
+      </nav>
       <main className={classes.content}>
         <div className={classes.toolbar} />
         <Typography paragraph>
@@ -154,3 +162,5 @@ export default function MiniDrawer() {
     </div>
   )
 }
+
+export default ResponsiveDrawer
