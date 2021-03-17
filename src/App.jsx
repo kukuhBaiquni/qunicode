@@ -1,11 +1,15 @@
 import { Provider } from 'react-redux'
-import Dashboard from 'Layout/Dashboard'
+import Dashboard from 'Views/Dashboard'
+import { ThemeProvider } from '@material-ui/styles'
+import theme from 'Theme'
 import store from './Lib/Redux/store'
 
 function App() {
   return (
     <Provider store={store}>
-      <Dashboard />
+      <ThemeProvider theme={theme}>
+        <Dashboard />
+      </ThemeProvider>
     </Provider>
   )
 }

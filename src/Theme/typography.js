@@ -5,7 +5,7 @@ export default {
     color: palette.text.primary,
     useNextVariants: true,
     fontFamily: [
-      'Montserrat',
+      'Nunito',
     ].join(','),
     fontWeight: 500,
     fontSize: '35px',
@@ -16,7 +16,7 @@ export default {
     color: palette.text.primary,
     useNextVariants: true,
     fontFamily: [
-      'Montserrat',
+      'Nunito',
     ].join(','),
     fontWeight: 500,
     fontSize: '29px',
@@ -27,7 +27,7 @@ export default {
     color: palette.text.primary,
     useNextVariants: true,
     fontFamily: [
-      'Montserrat',
+      'Blinker',
     ].join(','),
     fontWeight: 500,
     fontSize: '24px',
@@ -38,7 +38,7 @@ export default {
     color: palette.text.primary,
     useNextVariants: true,
     fontFamily: [
-      'Montserrat',
+      'Nunito',
     ].join(','),
     fontWeight: 500,
     fontSize: '20px',
@@ -49,7 +49,7 @@ export default {
     color: palette.text.primary,
     useNextVariants: true,
     fontFamily: [
-      'Montserrat',
+      'Nunito',
     ].join(','),
     fontWeight: 500,
     fontSize: '16px',
@@ -60,7 +60,7 @@ export default {
     color: palette.text.primary,
     useNextVariants: true,
     fontFamily: [
-      'Montserrat',
+      'Nunito',
     ].join(','),
     fontWeight: 500,
     fontSize: '14px',
@@ -69,7 +69,7 @@ export default {
   },
   h7: {
     fontFamily: [
-      'Montserrat',
+      'Nunito',
     ].join(','),
     fontWeight: 500,
     texttransform: 'none',
@@ -77,7 +77,7 @@ export default {
   },
   h8: {
     fontFamily: [
-      'Montserrat',
+      'Nunito',
     ].join(','),
     fontWeight: 500,
   },
@@ -85,7 +85,7 @@ export default {
     color: palette.text.primary,
     useNextVariants: true,
     fontFamily: [
-      'Montserrat',
+      'Nunito',
     ].join(','),
     fontSize: '16px',
     letterSpacing: '-0.05px',
@@ -95,7 +95,7 @@ export default {
     color: palette.text.secondary,
     useNextVariants: true,
     fontFamily: [
-      'Montserrat',
+      'Nunito',
     ].join(','),
     fontWeight: 400,
     fontSize: '14px',
@@ -106,7 +106,7 @@ export default {
     color: palette.text.custom,
     useNextVariants: true,
     fontFamily: [
-      'Montserrat',
+      'Nunito',
     ].join(','),
     fontSize: '14px',
     letterSpacing: '-0.05px',
@@ -116,7 +116,7 @@ export default {
     color: palette.text.secondary,
     useNextVariants: true,
     fontFamily: [
-      'Montserrat',
+      'Nunito',
     ].join(','),
     fontSize: '12px',
     letterSpacing: '-0.04px',
@@ -126,7 +126,7 @@ export default {
     color: palette.text.secondary,
     useNextVariants: true,
     fontFamily: [
-      'Montserrat',
+      'Nunito',
     ].join(','),
     fontSize: '14px',
   },
@@ -134,7 +134,7 @@ export default {
     color: palette.white,
     useNextVariants: true,
     fontFamily: [
-      'Montserrat',
+      'Nunito',
     ].join(','),
     fontSize: '14px',
   },
@@ -142,7 +142,7 @@ export default {
     color: palette.text.secondary,
     useNextVariants: true,
     fontFamily: [
-      'Montserrat',
+      'Nunito',
     ].join(','),
     fontSize: '11px',
     letterSpacing: '0.33px',
@@ -152,7 +152,7 @@ export default {
     color: palette.text.secondary,
     useNextVariants: true,
     fontFamily: [
-      'Montserrat',
+      'Nunito',
     ].join(','),
     fontSize: '11px',
     fontWeight: 500,
@@ -164,7 +164,7 @@ export default {
     color: palette.text.secondary,
     useNextVariants: true,
     fontFamily: [
-      'Montserrat',
+      'Nunito',
     ].join(','),
     fontSize: '14px',
     fontWeight: '500',
@@ -176,7 +176,7 @@ export default {
     color: palette.text.required,
     useNextVariants: true,
     fontFamily: [
-      'Montserrat',
+      'Nunito',
     ].join(','),
     fontSize: '14px',
     letterSpacing: '-0.05px',

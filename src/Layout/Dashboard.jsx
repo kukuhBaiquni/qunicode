@@ -7,7 +7,6 @@ import Toolbar from '@material-ui/core/Toolbar'
 import List from '@material-ui/core/List'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import Typography from '@material-ui/core/Typography'
-import Divider from '@material-ui/core/Divider'
 import IconButton from '@material-ui/core/IconButton'
 import Hidden from '@material-ui/core/Hidden'
 import MenuIcon from '@material-ui/icons/Menu'
@@ -42,10 +41,13 @@ function ResponsiveDrawer() {
       <div className={classes.logoWrapper}>
         <img
           className={classes.imageLogo}
-          src='https://elwiki.net/wiki/images/1/11/Title_680.png'
+          src='https://elwiki.net/wiki/images/b/b7/VarnimyrTitle1.png'
           alt='purifier'
         />
       </div>
+      <Typography h3 variant='h3' className={classes.logoTitle}>
+        Rekindled Fire
+      </Typography>
       <List>
         {['All mail', 'Trash', 'Spam'].map((text, index) => (
           <ListItem button key={text}>

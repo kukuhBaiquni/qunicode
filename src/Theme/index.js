@@ -2,12 +2,12 @@ import { createMuiTheme } from '@material-ui/core'
 
 import palette from './palette'
 import typography from './typography'
-import overrides from './Overrides'
+// import overrides from './Overrides'
 
 const theme = createMuiTheme({
   palette,
   typography,
-  overrides,
+  // overrides,
 })
 
 export default theme
