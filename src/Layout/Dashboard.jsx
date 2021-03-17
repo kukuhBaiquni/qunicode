@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-import { useTheme } from '@material-ui/core/styles'
+import { useTheme, withStyles } from '@material-ui/core/styles'
 import Drawer from '@material-ui/core/Drawer'
 import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
@@ -22,6 +22,15 @@ import ExpandMore from '@material-ui/icons/ExpandMore'
 
 import useStyles from './Dashboard-jss'
 
+const AppTitle = withStyles((theme) => ({
+  root: {
+    color: theme.palette.white,
+    fontSize: 24,
+    marginTop: 10,
+    fontWeight: 700,
+  },
+}))(Typography)
+
 function ResponsiveDrawer() {
   const classes = useStyles()
   const theme = useTheme()
@@ -41,13 +50,13 @@ function ResponsiveDrawer() {
       <div className={classes.logoWrapper}>
         <img
           className={classes.imageLogo}
-          src='https://elwiki.net/wiki/images/b/b7/VarnimyrTitle1.png'
+          src='https://elwiki.net/wiki/images/8/85/MasterRoadTitle4.png'
           alt='purifier'
         />
+        <AppTitle variant='h3' className={classes.logoTitle}>
+          MASTER CREST
+        </AppTitle>
       </div>
-      <Typography h3 variant='h3' className={classes.logoTitle}>
-        Rekindled Fire
-      </Typography>
       <List>
         {['All mail', 'Trash', 'Spam'].map((text, index) => (
           <ListItem button key={text}>

@@ -1,6 +1,6 @@
 import { makeStyles } from '@material-ui/core/styles'
 
-const drawerWidth = 240
+const drawerWidth = 280
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
       width: `calc(100% - ${drawerWidth}px)`,
       marginLeft: drawerWidth,
     },
-    background: 'linear-gradient(45deg, rgba(194,217,241,1) 0%, rgba(255,158,168,1) 100%)',
+    background: theme.palette.white,
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -30,7 +30,6 @@ const useStyles = makeStyles((theme) => ({
   toolbar: theme.mixins.toolbar,
   drawerPaper: {
     width: drawerWidth,
-    background: 'linear-gradient(45deg, rgba(194,217,241,1) 0%, rgba(255,158,168,1) 100%)',
   },
   content: {
     flexGrow: 1,
@@ -43,7 +42,11 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    margin: '25px 0 10px',
+    flexDirection: 'column',
+    marginBottom: 15,
+    backgroundColor: 'hotpink',
+    padding: '25px 15px',
+    background: 'linear-gradient(45deg, rgba(194,217,241,1) 0%, rgba(255,158,168,1) 100%)',
   },
   imageLogo: {
 

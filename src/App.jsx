@@ -1,5 +1,5 @@
 import { Provider } from 'react-redux'
-import Dashboard from 'Views/Dashboard'
+import Dashboard from 'Layout/Dashboard'
 import { ThemeProvider } from '@material-ui/styles'
 import theme from 'Theme'
 import store from './Lib/Redux/store'
