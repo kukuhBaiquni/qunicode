@@ -20,11 +20,12 @@ import Collapse from '@material-ui/core/Collapse'
 import ExpandLess from '@material-ui/icons/ExpandLess'
 import ExpandMore from '@material-ui/icons/ExpandMore'
 
+import MenuList from 'Components/MenuList'
 import useStyles from './Dashboard-jss'
 
 const AppTitle = withStyles((theme) => ({
   root: {
-    color: theme.palette.white,
+    color: theme.palette.primary.main,
     fontSize: 24,
     marginTop: 10,
     fontWeight: 700,
@@ -35,61 +36,10 @@ function ResponsiveDrawer() {
   const classes = useStyles()
   const theme = useTheme()
   const [mobileOpen, setMobileOpen] = useState(false)
-  const [childOpen, setChildOpen] = useState(false)
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen)
   }
-
-  const toggleChild = () => {
-    setChildOpen((old) => !old)
-  }
-
-  const drawer = (
-    <div>
-      <div className={classes.logoWrapper}>
-        <img
-          className={classes.imageLogo}
-          src='https://elwiki.net/wiki/images/8/85/MasterRoadTitle4.png'
-          alt='purifier'
-        />
-        <AppTitle variant='h3' className={classes.logoTitle}>
-          MASTER CREST
-        </AppTitle>
-      </div>
-      <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
-      </List>
-      <ListItem button onClick={toggleChild}>
-        <ListItemIcon>
-          <InboxIcon />
-        </ListItemIcon>
-        <ListItemText primary='Inbox' />
-        {childOpen ? <ExpandLess /> : <ExpandMore />}
-      </ListItem>
-      <Collapse in={childOpen} timeout='auto' unmountOnExit>
-        <List component='div' disablePadding>
-          <ListItem button className={classes.nested}>
-            <ListItemIcon>
-              <BlurLinear />
-            </ListItemIcon>
-            <ListItemText primary='Starred' />
-          </ListItem>
-          <ListItem button className={classes.nested}>
-            <ListItemIcon>
-              <BlurLinear />
-            </ListItemIcon>
-            <ListItemText primary='Starred' />
-          </ListItem>
-        </List>
-      </Collapse>
-    </div>
-  )
 
   return (
     <div className={classes.root}>
@@ -125,7 +75,7 @@ function ResponsiveDrawer() {
               keepMounted: true, // Better open performance on mobile.
             }}
           >
-            {drawer}
+            <MenuList />
           </Drawer>
         </Hidden>
         <Hidden xsDown implementation='css'>
@@ -136,7 +86,7 @@ function ResponsiveDrawer() {
             variant='permanent'
             open
           >
-            {drawer}
+            <MenuList />
           </Drawer>
         </Hidden>
       </nav>

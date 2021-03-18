@@ -28,31 +28,18 @@ const useStyles = makeStyles((theme) => ({
   },
   // necessary for content to be below app bar
   toolbar: theme.mixins.toolbar,
+  // drawerBody: {
+  //   padding: 10,
+  //   backgroundColor: 'transparent',
+  // },
   drawerPaper: {
     width: drawerWidth,
+    backgroundColor: theme.palette.primary.superLight,
+    // background: 'linear-gradient(45deg, rgba(194,217,241,1) 0%, rgba(255,158,168,1) 100%)',
   },
   content: {
     flexGrow: 1,
     padding: theme.spacing(3),
-  },
-  nested: {
-    paddingLeft: theme.spacing(4),
-  },
-  logoWrapper: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    flexDirection: 'column',
-    marginBottom: 15,
-    backgroundColor: 'hotpink',
-    padding: '25px 15px',
-    background: 'linear-gradient(45deg, rgba(194,217,241,1) 0%, rgba(255,158,168,1) 100%)',
-  },
-  imageLogo: {
-
-  },
-  logoTitle: {
-    textAlign: 'center',
   },
 }))
 

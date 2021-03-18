@@ -9,8 +9,9 @@ export default {
   primary: {
     contrastText: white,
     dark: '#55769b',
-    main: '#81c0e2',
+    main: '#69eea7',
     light: '#bfe4f4',
+    superLight: '#f1fbff',
   },
   secondary: {
     contrastText: white,
@@ -34,7 +35,7 @@ export default {
   link: colors.blue[800],
   icon: black,
   background: {
-    default: '#F4F6F8',
+    default: white, // '#F4F6F8',
     paper: white,
   },
   blue: '#165581',
