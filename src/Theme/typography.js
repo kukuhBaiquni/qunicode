@@ -67,20 +67,6 @@ export default {
     letterSpacing: '-0.05px',
     lineHeight: '20px',
   },
-  h7: {
-    fontFamily: [
-      'Nunito',
-    ].join(','),
-    fontWeight: 500,
-    texttransform: 'none',
-    fontSize: '10px',
-  },
-  h8: {
-    fontFamily: [
-      'Nunito',
-    ].join(','),
-    fontWeight: 500,
-  },
   subtitle1: {
     color: palette.text.primary,
     useNextVariants: true,

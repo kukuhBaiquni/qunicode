@@ -1,12 +1,9 @@
 import { makeStyles } from '@material-ui/core/styles'
 
 const useStyles = makeStyles((theme) => ({
-  // drawerBody: {
-  //   padding: 10,
-  //   backgroundColor: 'transparent',
-  // },
-  nested: {
-    paddingLeft: theme.spacing(4),
+  drawerBody: {
+    padding: 10,
+    backgroundColor: 'transparent',
   },
   logoWrapper: {
     display: 'flex',
@@ -14,8 +11,9 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     flexDirection: 'column',
     marginBottom: 15,
-    backgroundColor: theme.palette.white,
+    backgroundColor: '#3e3e3e',
     padding: '25px 15px',
+    borderRadius: 5,
   },
   imageLogo: {
     // Set height & width image here
