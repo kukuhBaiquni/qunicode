@@ -18,7 +18,8 @@ const useStyles = makeStyles((theme) => ({
       width: `calc(100% - ${drawerWidth}px)`,
       marginLeft: drawerWidth,
     },
-    background: theme.palette.white,
+    background: theme.palette.primary.main,
+    boxShadow: 'none',
   },
   menuButton: {
     marginRight: theme.spacing(2),

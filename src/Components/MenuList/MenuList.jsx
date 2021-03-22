@@ -37,9 +37,6 @@ const CustomListItemText = withStyles((theme) => ({
     fontSize: 16,
     fontWeight: 600,
     transition: 'margin-left .25s',
-    '&:hover': {
-      marginLeft: 10,
-    },
   },
 }))(ListItemText)
 
