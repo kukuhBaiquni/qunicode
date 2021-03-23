@@ -12,11 +12,14 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
     marginBottom: 15,
     backgroundColor: '#3e3e3e',
-    padding: '25px 15px',
     borderRadius: 5,
   },
   imageLogo: {
     // Set height & width image here
+    width: '100%',
+    height: 150,
+    objectFit: 'cover',
+    borderRadius: 5,
   },
   logoTitle: {
     textAlign: 'center',

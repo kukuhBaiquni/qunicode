@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
       width: `calc(100% - ${drawerWidth}px)`,
       marginLeft: drawerWidth,
     },
-    background: theme.palette.primary.main,
+    background: theme.palette.secondary.light,
     boxShadow: 'none',
   },
   menuButton: {
@@ -35,12 +35,15 @@ const useStyles = makeStyles((theme) => ({
   // },
   drawerPaper: {
     width: drawerWidth,
-    backgroundColor: theme.palette.primary.superLight,
+    backgroundColor: theme.palette.secondary.superLight,
     // background: 'linear-gradient(45deg, rgba(194,217,241,1) 0%, rgba(255,158,168,1) 100%)',
   },
   content: {
     flexGrow: 1,
     padding: theme.spacing(3),
+  },
+  title: {
+    flexGrow: 1,
   },
 }))
 

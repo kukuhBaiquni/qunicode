@@ -8,16 +8,17 @@ export default {
   white,
   primary: {
     contrastText: white,
-    dark: '#7f6dd6',
+    dark: '#49A473',
     main: '#69eea7',
     light: '#a0ffcd',
     superLight: '#f1fbff',
   },
   secondary: {
     contrastText: white,
-    dark: '#165581',
-    main: '#165581',
-    light: '#165581',
+    dark: '#6200ce',
+    main: '#7c15dd',
+    light: '#c197f2',
+    superLight: '#f1e6fc',
   },
   error: {
     contrastText: white,

@@ -6,6 +6,7 @@ import ListItem from '@material-ui/core/ListItem'
 import ListItemIcon from '@material-ui/core/ListItemIcon'
 import ListItemText from '@material-ui/core/ListItemText'
 import { withStyles } from '@material-ui/core/styles'
+import Logo from 'Assets/Images/sdr.png'
 import useStyles from './MenuList-jss'
 
 const AppTitle = withStyles((theme) => ({
@@ -27,7 +28,7 @@ const CustomListItem = withStyles((theme) => ({
     padding: '12px 16px',
     borderRadius: 5,
     '&:hover': {
-      backgroundColor: theme.palette.primary.light,
+      backgroundColor: theme.palette.secondary.light,
     },
   },
 }))(ListItem)
@@ -47,12 +48,9 @@ function MenuList() {
       <div className={classes.logoWrapper}>
         <img
           className={classes.imageLogo}
-          src='https://elwiki.net/wiki/images/a/a1/MasterRoadTitle6.png'
+          src={Logo}
           alt='purifier'
         />
-        <AppTitle variant='h3' className={classes.logoTitle}>
-          ALTER GLOW
-        </AppTitle>
       </div>
       <CustomList>
         {['Dashboard', 'Media', 'Campaigns'].map((text, index) => (
