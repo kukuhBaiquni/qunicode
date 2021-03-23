@@ -51,7 +51,7 @@ function MenuList() {
           alt='purifier'
         />
         <AppTitle variant='h3' className={classes.logoTitle}>
-          TWIN DREAMS
+          ALTER GLOW
         </AppTitle>
       </div>
       <CustomList>

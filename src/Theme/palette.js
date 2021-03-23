@@ -26,7 +26,7 @@ export default {
     light: colors.red[400],
   },
   text: {
-    primary: '#3e3e3e',
+    primary: '#4A4A4A',
     secondary: colors.blueGrey[600],
     link: colors.blue[600],
     custom: colors.grey[900],
