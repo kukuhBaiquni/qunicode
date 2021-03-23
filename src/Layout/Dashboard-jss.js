@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
       width: `calc(100% - ${drawerWidth}px)`,
       marginLeft: drawerWidth,
     },
-    background: theme.palette.secondary.light,
+    background: theme.palette.primary.light,
     boxShadow: 'none',
   },
   menuButton: {
@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
   // },
   drawerPaper: {
     width: drawerWidth,
-    backgroundColor: theme.palette.secondary.superLight,
+    backgroundColor: theme.palette.primary.superLight,
     // background: 'linear-gradient(45deg, rgba(194,217,241,1) 0%, rgba(255,158,168,1) 100%)',
   },
   content: {

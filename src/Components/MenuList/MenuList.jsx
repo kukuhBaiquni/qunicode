@@ -6,7 +6,7 @@ import ListItem from '@material-ui/core/ListItem'
 import ListItemIcon from '@material-ui/core/ListItemIcon'
 import ListItemText from '@material-ui/core/ListItemText'
 import { withStyles } from '@material-ui/core/styles'
-import Logo from 'Assets/Images/sdr.png'
+import Logo from 'Assets/Images/sinlay.svg'
 import useStyles from './MenuList-jss'
 
 const AppTitle = withStyles((theme) => ({
@@ -28,7 +28,7 @@ const CustomListItem = withStyles((theme) => ({
     padding: '12px 16px',
     borderRadius: 5,
     '&:hover': {
-      backgroundColor: theme.palette.secondary.light,
+      backgroundColor: theme.palette.primary.light,
     },
   },
 }))(ListItem)
