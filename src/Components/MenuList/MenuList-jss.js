@@ -11,6 +11,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     flexDirection: 'column',
     marginBottom: 15,
+    backgroundColor: theme.palette.black,
     borderRadius: 5,
   },
   imageLogo: {
